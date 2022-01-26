@@ -1,1 +1,1 @@
-# core-javascript
+# Core JavaScript

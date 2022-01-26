@@ -34,7 +34,6 @@ const whoseTurn = document.querySelector('#whose-turn');
 
 /**
  * @desc 이벤트(Event) 객체
- * @see 
  *
  * 1. 사용자가 단어를 input 태그에 입력한다.
  * 2. 입력 버튼을 마우스로 클릭한다.
