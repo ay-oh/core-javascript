@@ -20,5 +20,16 @@
             <button>입력</button>
         </div>
     </main>
+    <script>
+        // prompt 함수를 사용하여 쿵쿵따에 참여할 플레이어 수 입력
+        const playerCount = parseInt(prompt("How many players join this game?"), 10);
+        console.log(`typeof playerCount: ${typeof(playerCount)}`);
+
+        // 템플릿 리터럴 사용4
+        const isConfirm = confirm(`총 ${playerCount} 명이 게임에 참가합니다.\n맞다면 확인 버튼을, 그렇지 않은 경우 취소 버튼을 클릭하세요.`);
+        console.log(`isConfirm: ${isConfirm}`);
+
+        isConfirm ? alert('게임을 시작합니다.') : alert('게임을 종료합니다.');
+    </script>
 </body>
 </html>
