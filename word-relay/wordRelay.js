@@ -1,0 +1,50 @@
+/**
+ * @desc prompt 함수를 사용하여 쿵쿵따에 참여할 플레이어 수 입력
+ * @see  https://developer.mozilla.org/ko/docs/Web/API/Window/prompt
+ */
+const playerCount = parseInt(prompt('How many players join this game?'), 10);
+console.log(`typeof playerCount: ${typeof playerCount}`);
+
+/**
+ * @desc 템플릿 리터럴 사용
+ * @see  https://developer.mozilla.org/ko/docs/Web/API/Window/confirm
+ */
+const isConfirm = confirm(
+  `총 ${playerCount} 명이 게임에 참가합니다.\n맞다면 확인 버튼을, 그렇지 않은 경우 취소 버튼을 클릭하세요.`
+);
+console.log(`isConfirm: ${isConfirm}`);
+
+/**
+ * @desc 삼항 연산자 사용
+ * @see  https://developer.mozilla.org/ko/docs/Web/API/Window/alert
+ */
+isConfirm ? alert('게임을 시작합니다.') : alert('게임을 종료합니다.');
+
+/**
+ * @desc query는 질의하다라는 의미 -> cf. 데이터베이스 언어(Structured Query Language)
+ * @see  https://developer.mozilla.org/ko/docs/Web/API/Document/querySelector
+ */
+const inputElement = document.querySelector('input');
+
+const buttonElement = document.querySelector('button');
+console.log(`buttonElement: ${buttonElement}`); // 개발자 도구 콘솔 탭으로 확인
+
+const keyword = document.querySelector('#word');
+const whoseTurn = document.querySelector('#whose-turn');
+
+/**
+ * @desc 이벤트(Event) 객체
+ * @see 
+ *
+ * 1. 사용자가 단어를 input 태그에 입력한다.
+ * 2. 입력 버튼을 마우스로 클릭한다.
+ * 3. 버튼을 클릭하면 입력한 문자열을 span 태그에 표시한다.
+ */
+inputElement.addEventListener('input', (event) => {
+  console.log(`단어 입력: ${event.target.value}`);
+});
+
+const onClickButton = () => {
+  console.log('사용자가 버튼을 클릭했습니다.');
+};
+buttonElement.addEventListener('click', onClickButton);
